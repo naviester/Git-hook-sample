@@ -18,14 +18,13 @@ android {
     }
     lintOptions {
         // if true, only report errors
-        ignoreWarnings false
+        ignoreWarnings true
         // if true, emit full/absolute paths to files with errors (true by default)
         absolutePaths true
         // if true, stop the gradle build if errors are found
         abortOnError true
         // if true, warnings are treated as errors.
         warningsAsErrors false
-        disable 'ObsoleteLintCustomCheck', 'OldTargetApi', 'GradleDependency', 'IconLauncherShape', 'IconLocation'
     }
     // Executes intallGitHooks tasks after clean task is executed.
     afterEvaluate {
