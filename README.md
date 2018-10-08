@@ -45,4 +45,4 @@ lintOptions {
 ```
 
 **Sample Screenshot from SourceTree of lint check while committing**
-![Sample Screenshot](/source_tree.png)
+![Sample Screenshot](/source_tree_new.png)
