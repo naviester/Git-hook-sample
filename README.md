@@ -26,3 +26,5 @@ Let's get down to understanding how this sample works and integrates pre-commit 
 At line no. 31 following code can be encountered.<br><br>```afterEvaluate { clean.dependsOn installGitHooks}```<br><br>
 This line of script justifies that gradle ***clean*** command will only be executed only when the execution of ***installGitHooks*** method's execution is completed.  
 
+####Sample Screenshot from SourceTree of lint check while committing
+![Sample Screenshot](/source_tree.png)
