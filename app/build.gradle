@@ -25,7 +25,6 @@ android {
         abortOnError true
         // if true, warnings are treated as errors.
         warningsAsErrors false
-        disable 'ObsoleteLintCustomCheck', 'OldTargetApi', 'GradleDependency', 'IconLauncherShape', 'IconLocation'
     }
     // Executes intallGitHooks tasks after clean task is executed.
     afterEvaluate {

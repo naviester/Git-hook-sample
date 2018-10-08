@@ -23,8 +23,26 @@ Let's get down to understanding how this sample works and integrates pre-commit 
 *   **pre-commit.sh**:<p>As the name suggests 'pre-commit', it get's executed prior to any commit in local git repository.
     In current example this file contains script to initiate **lint** check in current Android project. 
 *   **build.gradle (app level)**:<p>It's the heart of Android application at module level. This file calls methods in *git-hooks.gradle.* 
-At line no. 31 following code can be encountered.<br><br>```afterEvaluate { clean.dependsOn installGitHooks}```<br><br>
-This line of script justifies that gradle ***clean*** command will only be executed only when the execution of ***installGitHooks*** method's execution is completed.  
+At line no. 31 following code can be encountered.
+```groovy
+    afterEvaluate { 
+        clean.dependsOn installGitHooks
+    }
+```
+This line of script justifies that gradle ***clean*** command will only be executed only when the execution of ***installGitHooks*** method's execution is completed.
+<br><br>Use ***lintOptions*** block to configure lint for your project.
+```groovy
+lintOptions {
+        // if true, only report errors
+        ignoreWarnings true
+        // if true, emit full/absolute paths to files with errors (true by default)
+        absolutePaths true
+        // if true, stop the gradle build if errors are found
+        abortOnError true
+        // if true, warnings are treated as errors.
+        warningsAsErrors false
+    }
+```
 
 **Sample Screenshot from SourceTree of lint check while committing**
 ![Sample Screenshot](/source_tree.png)
