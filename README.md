@@ -3,7 +3,7 @@ Demo on basic use of ***"pre-commit"*** hook to check for lint errors or warning
 
 Basics of git-hooks can be learnt from[here.](https://githooks.com/)
 
-####How it works?
+<h4>How it works?</h4>
 Let's get down to understanding how this sample works and integrates pre-commit git hook.
 * Initially when the code base is checked out, everything is normal and silent as standard Android codebase.
 * Navigate to project directory and checkout following directory ***'.git/hooks'***. These are hooks are executed as per there names indicated.You will find many hook files like:
@@ -15,7 +15,7 @@ Let's get down to understanding how this sample works and integrates pre-commit 
 * This will copy **pre-commit** file into ****.git/hooks*** directory at project level.
 * Post this, whenever an effort is made to commit anything to designated repository, ***lint*** check will be executed automatically before the commit succeeds.
 
-##Important files
+<h2>Important files</h2>
 
 *   **git-hooks.gradle**: <p>Contains methods responsible for copying pre-commit file to designated directory '/.git'. 
     *   **installGitHooks()**: Initiates the copying of pre-commit.sh to /.git/hooks from ../git-hooks directory.
@@ -26,5 +26,5 @@ Let's get down to understanding how this sample works and integrates pre-commit 
 At line no. 31 following code can be encountered.<br><br>```afterEvaluate { clean.dependsOn installGitHooks}```<br><br>
 This line of script justifies that gradle ***clean*** command will only be executed only when the execution of ***installGitHooks*** method's execution is completed.  
 
-####Sample Screenshot from SourceTree of lint check while committing
+<h4>Sample Screenshot from SourceTree of lint check while committing</h4>
 ![Sample Screenshot](/source_tree.png)
