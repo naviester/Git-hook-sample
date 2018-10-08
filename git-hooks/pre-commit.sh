@@ -37,4 +37,4 @@ then
   exit 1
 fi
 
-exit $lintStatus
+exit ${lintStatus}

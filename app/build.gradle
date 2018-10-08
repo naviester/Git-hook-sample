@@ -18,7 +18,7 @@ android {
     }
     lintOptions {
         // if true, only report errors
-        ignoreWarnings false
+        ignoreWarnings true
         // if true, emit full/absolute paths to files with errors (true by default)
         absolutePaths true
         // if true, stop the gradle build if errors are found
